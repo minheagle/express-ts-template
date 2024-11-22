@@ -1,5 +1,4 @@
 import express, { Express } from "express";
-import { initDatabases } from "@/databases";
 import { initMiddleware } from "@/middlewares";
 import { initRouter } from "@/routers";
 import { notFoundMiddleware, errorHandler } from "@/middlewares";

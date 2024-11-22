@@ -7,7 +7,7 @@ import {
 import { RedisErrorResponse } from "@/exceptions/internal.exception";
 
 class InitializeRedis {
-  private static client: Redis | null = null;
+  private static client: Redis;
   private static connectionTimeout: NodeJS.Timeout | null = null;
 
   private static handleConnectionTimeout = () => {

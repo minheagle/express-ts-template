@@ -16,8 +16,8 @@ export const initMiddleware = (app: Express) => {
   app.use(express.urlencoded({ extended: true }));
 
   // Init morgan
-  app.use(morgan.successHandler);
-  app.use(morgan.errorHandler);
+  app.use(morgan.morganMiddleware);
+  // app.use(morgan.errorHandler);
 
   // Init helemt
   app.use(helmet());
@@ -32,7 +32,7 @@ export const initMiddleware = (app: Express) => {
   app.use(sessionMiddleware);
 
   // Init rate limiter
-  app.use(limiter);
+  // app.use(limiter);
 
   // Init passport (Optional)
 };
